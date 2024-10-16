@@ -31,7 +31,7 @@ class HomeView extends StatelessWidget {
                   child: Align(alignment: Alignment.bottomLeft,
                       child: Text('Settings',style: TextStyle(fontSize: 28),)),
                 ),
-                ListTile(
+                ListTile(title: Text(''),
                  // title:PopupMenuButton(itemBuilder: Text('')),
                   // onTap: (){
                   //  // Provider.of<Settings>(context).setLocale(locale)
