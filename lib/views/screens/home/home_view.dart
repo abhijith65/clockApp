@@ -4,16 +4,21 @@ import 'package:samplemodel/views/screens/home/home_viewmodel.dart';
 import 'package:samplemodel/views/tools/settings.dart';
 import 'package:stacked/stacked.dart';
 
+import '../../../generated/l10n.dart';
+
 class HomeView extends StatelessWidget {
   const HomeView({super.key});
 
   @override
   Widget build(BuildContext context) {
+    final s=S.of(context);
    // var a='pop';
     return ViewModelBuilder<HomeViewModel>.reactive(
       builder: (context,model,child){
         return Scaffold(
-          appBar: AppBar(),
+          appBar: AppBar(
+            title: Text(s.title),
+          ),
           body: Center(
             child: Icon(Icons.waving_hand_rounded),
           ),
@@ -25,6 +30,12 @@ class HomeView extends StatelessWidget {
                   color: Colors.blueAccent,
                   child: Align(alignment: Alignment.bottomLeft,
                       child: Text('Settings',style: TextStyle(fontSize: 28),)),
+                ),
+                ListTile(
+                 // title:PopupMenuButton(itemBuilder: Text('')),
+                  // onTap: (){
+                  //  // Provider.of<Settings>(context).setLocale(locale)
+                  // },
                 ),
                 ListTile(
                   title: Text('dark mode'),
