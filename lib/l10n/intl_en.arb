@@ -1,4 +1,7 @@
 {
 "@@locale":"en",
-"title" : "hello"
+"title" : "hello",
+"settings" :"Settings",
+"languages" : "Languages",
+"darkMode" : "Dark Mode"
 }

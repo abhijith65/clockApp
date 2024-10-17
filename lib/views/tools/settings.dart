@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 class Settings with ChangeNotifier{
   Settings(){
-    debugPrint('init');
+    debugPrint('settings');
   }
   bool _isdark= false;
   bool get isdark=> _isdark;

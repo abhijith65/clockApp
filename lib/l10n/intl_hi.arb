@@ -1,4 +1,7 @@
 {
 "@@locale" : "hi",
-"title" : "hai"
+"title" : "नमस्ते",
+"settings" :"सेटिंग्स",
+"languages" : "भाषा",
+"darkMode" : "डार्क मोड"
 }
