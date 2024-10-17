@@ -1,5 +1,7 @@
+
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+
 import 'package:samplemodel/views/screens/home/home_viewmodel.dart';
 import 'package:samplemodel/views/tools/settings.dart';
 import 'package:stacked/stacked.dart';
@@ -21,7 +23,14 @@ class HomeView extends StatelessWidget {
             title: Text(s.title),
           ),
           body: Center(
-            child: Icon(Icons.waving_hand_rounded),
+            child: Column(
+              children: [
+               StreamBuilder(stream: model.clock(), builder: (context,snapshot){
+                 if(snapshot.data ==null)return Text('lol');
+                 return Text(snapshot.data!,style:TextStyle(fontSize: 150) ,);
+               })
+              ],
+            ),
           ),
           drawer: Drawer(
             child:ListView(
@@ -67,4 +76,5 @@ class HomeView extends StatelessWidget {
       viewModelBuilder: ()=>HomeViewModel(),
     );
   }
+
 }

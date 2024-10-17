@@ -5,6 +5,7 @@ import '../views/screens/home/home_view.dart';
 import '../views/screens/splash/splash_view.dart';
 import '../views/tools/settings.dart';
 
+
 @StackedApp(
   routes: [
     MaterialRoute(page: SplashView, initial: true),
@@ -12,6 +13,7 @@ import '../views/tools/settings.dart';
   ],
   dependencies: [
     LazySingleton(classType: NavigationService),
+    LazySingleton(classType: Settings)
   ],
 )
 class AppSetup{}
