@@ -13,7 +13,7 @@ class SplashView extends StatelessWidget {
       builder: (BuildContext context, SplashViewModel viewModel, Widget? child) {
         return Scaffold(
           body: Center(
-            child: Icon(Icons.casino_outlined,size: 180,),
+            child: Icon(Icons.access_time_rounded ,size: 180,),
           ),
 
         );

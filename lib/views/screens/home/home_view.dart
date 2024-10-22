@@ -1,6 +1,8 @@
 
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:samplemodel/app/app.router.dart';
+import 'package:samplemodel/app/utils.dart';
 
 import 'package:samplemodel/views/screens/home/home_viewmodel.dart';
 import 'package:samplemodel/views/tools/settings.dart';
@@ -27,7 +29,7 @@ class HomeView extends StatelessWidget {
               children: [
                StreamBuilder(stream: model.clock(), builder: (context,snapshot){
                  if(snapshot.data ==null)return Text('lol');
-                 return Text(snapshot.data!,style:TextStyle(fontSize: 150) ,);
+                 return Text(snapshot.data!,style:TextStyle(fontSize: 70) ,);
                })
               ],
             ),
@@ -70,6 +72,9 @@ class HomeView extends StatelessWidget {
               ],
             )
           ),
+          floatingActionButton: FloatingActionButton(onPressed: (){
+            navigationService.navigateTo(Routes.alarmView);
+          },child: Icon(Icons.alarm),),
 
         );
       },

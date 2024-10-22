@@ -11,7 +11,7 @@ late Timer _timer;
   void startTimer() async {
 
 
-     _timer = Timer(const Duration(seconds: 7), () async {
+     _timer = Timer(const Duration(seconds: 2), () async {
 
 
       //navigationService.navigateTo(Routes.homeView);
